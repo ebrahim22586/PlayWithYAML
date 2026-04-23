@@ -1,4 +1,4 @@
-name: Run first hello welcome to yaml
+name: Run first hello welcome to yaml local
 
 on: 
   workflow_dispatch:
@@ -17,4 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello
-        run: echo "Hello from first yaml file ${{vars.enviromnet}}"
+        run: echo "Hello from first yaml file and env : ${{inputs.enviromnet}}"
