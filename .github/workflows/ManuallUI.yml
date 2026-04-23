@@ -1,0 +1,13 @@
+name: Run first hello welcome to yaml
+
+on: 
+  workflow_dispatch:
+
+
+
+jobs:
+  print-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello
+        run: echo "Hello from first yaml file"
