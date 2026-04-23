@@ -2,7 +2,14 @@ name: Run first hello welcome to yaml
 
 on: 
   workflow_dispatch:
-
+    inputs:  
+      environment:
+       required: true
+       type: choice
+       options:
+          - STG
+          - PROD
+       default: STG    
 
 
 jobs:
@@ -10,4 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello
-        run: echo "Hello from first yaml file"
+        run: echo "Hello from first yaml file ${{vars.enviromnet}}"
