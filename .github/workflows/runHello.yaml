@@ -1,15 +1,9 @@
 name: Run first hello welcome to yaml local
 
 on: 
-  workflow_dispatch:
-    inputs:  
-      environment:
-       required: true
-       type: choice
-       options:
-          - STG
-          - PROD
-       default: STG    
+  repository_dispatch: 
+    types:
+      - incident_report
 
 
 jobs:
@@ -17,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello
-        run: echo "Hello from first yaml file and env ${{ inputs.environment }}"
+        run: echo "Hello from first yaml file API Triggerd"
