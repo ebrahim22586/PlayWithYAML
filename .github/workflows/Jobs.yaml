@@ -12,7 +12,7 @@ jobs:
       - name: Print Hello
         run: |
           echo  Hello from ${{ github.job  }}
-          apt search python 
-          apt update 
+          sudo  apt search python 
+          sudo  apt update 
 
         
