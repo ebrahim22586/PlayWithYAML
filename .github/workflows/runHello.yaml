@@ -1,9 +1,8 @@
-name: Run first hello welcome to yaml local
+
 
 on: 
-  repository_dispatch: 
-    types:
-      - incident_report
+  workflow_dispatch: 
+
 
 
 jobs:
@@ -11,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello
-        run: echo "Hello from first yaml file API Triggerd"
+        run: echo "Hello from first yaml file UI Triggerd"
